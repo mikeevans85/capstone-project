@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
+    <h1>Welcome to your news app!</h1>
+    <a href="/#/login">Click here to login.</a>
   </div>
 </template>
 
