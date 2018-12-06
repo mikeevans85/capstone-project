@@ -40,23 +40,26 @@ export default {
       function(response) {
         console.log(response.data);
         this.sources = response.data;
-      }.bind(this)
-    );
+      }.bind(this));
   },
   methods: {
     toggleSource: function(event, id) {
       var subChkbox = document.getElementById('sub-chkbox');
-      if(subChkbox.checked) {
-        var params = {
-          source_id: id
-        };
+      var params = {
+        source_id: id
+      };
+      if (subChkbox.checked) {
         axios.post("http://localhost:3000/api/sources", params).then(
           function(response) {
             console.log(response.data);
-            this.sources = response.data;
           }.bind(this));
       } else {
-        console.log("hello");
+        axios.destroy("http://localhost:3000/api/sources" + params).then(
+          function(response) {
+            console.log(response.data);
+            this.sources = response.data;
+            this.$router.push("/sources");
+          }.bind(this));
       }
     }
   }
