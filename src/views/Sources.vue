@@ -10,7 +10,7 @@
               <p class="card-publishedAt">{{ source.place_of_pub }}</p>
               <div class="card-body">
               <p class="card-description">{{ source.description }}</p>
-              <input type="checkbox" v-on:click="toggleSource(event)">
+              <input id="sub-chkbox" type="checkbox" v-on:click="toggleSource(event, source.id)">
               </div>
             </div>
           </div>
@@ -31,7 +31,8 @@ export default {
       message: "You have not selected any sources. Click on the sidebar to add sources to your feed!",
       sources: [],
       inputTitle: "",
-      inputDescription: ""
+      inputDescription: "",
+      event: ""
     };
   },
   created: function() {
@@ -43,21 +44,21 @@ export default {
     );
   },
   methods: {
-    toggleSource: function(event) {
-      var x = event.detail
-      if (x % 2 !== 0) {
+    toggleSource: function(event, id) {
+      var subChkbox = document.getElementById('sub-chkbox');
+      if(subChkbox.checked) {
         var params = {
-          user_id: this.user.id,
-          source_id = this.source.id
-          };
-        axios.post("http://localhost:3000/api/usersources", params).then(
+          source_id: id
+        };
+        axios.post("http://localhost:3000/api/sources", params).then(
           function(response) {
             console.log(response.data);
             this.sources = response.data;
-          }.bind(this)
-        };
+          }.bind(this));
+      } else {
+        console.log("hello");
+      }
     }
-  },
-  computed: {}
+  }
 };
 </script>
