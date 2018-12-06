@@ -9,7 +9,8 @@
               <h2 class="card-name">{{ source.name }}</h2>
               <p class="card-publishedAt">{{ source.place_of_pub }}</p>
               <div class="card-body">
-                <p class="card-description">{{ source.description }}</p>
+              <p class="card-description">{{ source.description }}</p>
+              <input type="checkbox" v-on:click="toggleSource(event)">
               </div>
             </div>
           </div>
@@ -41,7 +42,22 @@ export default {
       }.bind(this)
     );
   },
-  methods: {},
+  methods: {
+    toggleSource: function(event) {
+      var x = event.detail
+      if (x % 2 !== 0) {
+        var params = {
+          user_id: this.user.id,
+          source_id = this.source.id
+          };
+        axios.post("http://localhost:3000/api/usersources", params).then(
+          function(response) {
+            console.log(response.data);
+            this.sources = response.data;
+          }.bind(this)
+        };
+    }
+  },
   computed: {}
 };
 </script>
