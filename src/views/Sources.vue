@@ -54,10 +54,9 @@ export default {
             console.log(response.data);
           }.bind(this));
       } else {
-        axios.destroy("http://localhost:3000/api/sources" + params).then(
+        axios.delete("http://localhost:3000/api/sources/" + params.source_id).then(
           function(response) {
             console.log(response.data);
-            this.sources = response.data;
             this.$router.push("/sources");
           }.bind(this));
       }
