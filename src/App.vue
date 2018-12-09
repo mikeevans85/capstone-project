@@ -43,6 +43,4 @@
 	</div>
 </template>
 
-<style>
-@import "posted/css/bootstrap.css";
-</style>
+<style></style>
