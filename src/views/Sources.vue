@@ -10,7 +10,7 @@
               <p class="card-publishedAt">{{ source.place_of_pub }}</p>
               <div class="card-body">
               <p class="card-description">{{ source.description }}</p>
-              <input id="sub-chkbox" type="checkbox" v-on:click="toggleSource(event, source.id)">
+              <toggle-button @change="toggleSource(source)" id="button" v-model="source.subscribed" :sync="true" :labels="true"/>
               </div>
             </div>
           </div>
@@ -32,7 +32,6 @@ export default {
       sources: [],
       inputTitle: "",
       inputDescription: "",
-      event: ""
     };
   },
   created: function() {
@@ -43,18 +42,20 @@ export default {
       }.bind(this));
   },
   methods: {
-    toggleSource: function(event, id) {
-      var subChkbox = document.getElementById('sub-chkbox');
+    toggleSource: function(source) {
+      // var toggleButton = document.getElementById('button');
       var params = {
-        source_id: id
+        source_id: source.id
       };
-      if (subChkbox.checked) {
+      if (source.subscribed) {
+        console.log("Create new");
         axios.post("http://localhost:3000/api/sources", params).then(
           function(response) {
             console.log(response.data);
           }.bind(this));
       } else {
-        axios.delete("http://localhost:3000/api/sources/" + params.source_id).then(
+        console.log("Delete");
+        axios.delete("http://localhost:3000/api/sources/" + source.id).then(
           function(response) {
             console.log(response.data);
             this.$router.push("/sources");

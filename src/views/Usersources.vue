@@ -6,7 +6,13 @@
           <div v-if="usersources.length === 0">{{ message }}</div>
           <div v-else v-for="usersource in usersources" class="col">
             <div class="card-body" style="width: 18rem;">
-              <img class="card-src-img" v-bind:src="usersource.source.image_url" alt="Source logo" />
+              <img
+                class="card-src-img"
+                v-bind:src="usersource.source.image_url"
+                height="100"
+                width="100"
+                alt="Source logo"
+              />
               <h2 class="card-title">{{ usersource.title }}</h2>
               <p class="card-publishedAt">{{ usersource.publishedAt }}</p>
               <img
