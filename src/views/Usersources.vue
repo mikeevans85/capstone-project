@@ -5,14 +5,8 @@
         <template id="SourceCard">
           <div v-if="usersources.length === 0">{{ message }}</div>
           <div v-else v-for="usersource in usersources" class="col">
-            <div class="card-body" style="width: 18rem;">
-              <img
-                class="card-src-img"
-                v-bind:src="usersource.source.image_url"
-                height="100"
-                width="100"
-                alt="Source logo"
-              />
+            <div class="card-body" style="width: 50rem;">
+              <img class="card-src-img" v-bind:src="source.image_url" height="250" width="250" alt="Source logo" />
               <h2 class="card-title">{{ usersource.title }}</h2>
               <p class="card-publishedAt">{{ usersource.publishedAt }}</p>
               <img
@@ -22,11 +16,13 @@
                     ? usersource.urlToImage
                     : 'http://i2.wp.com/www.4motiondarlington.org/wp-content/uploads/2013/06/No-image-found.jpg?zoom=2&fit=300%2C300'
                 "
+                height="500"
+                width="800"
                 alt="Card image cap"
               />
               <div class="card-body">
-                <p class="card-description">{{ usersource.description }}</p>
-                <a v-bind:href="usersource.url">Click for full article</a>
+                <h5 class="card-description">{{ usersource.description }}</h5>
+                <a v-bind:href="usersource.url"><strong>Click for full article</strong></a>
               </div>
             </div>
           </div>

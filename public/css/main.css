@@ -24,7 +24,7 @@ html { font-size:100%; }
 body {font-size:14px;color:#000;font-family: 'Raleway', sans-serif;background-color: #ffffff;text-decoration:none;margin:0;padding:0;}
 
 /* ----- HEADINGS ----- */
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {line-height:0.8;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {line-height:1;}
 
 
 #lightbox .modal-content {
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {line-height:0.8;}
 }
 
 /* ----- HEADER & NAVIGATION ----- */
-.headerbar {background-color:#008f54; margin-bottom:20px;}
+.headerbar {background-color:#008f54; margin-bottom:100px;}
 .navbar {margin-bottom:0;}
 .navbar-default {border:0; background:none;}
 .navbar-brand {padding:5px 15px; height:auto; margin-right: 40px;}
@@ -242,7 +242,7 @@ p {color:#444444; font-size:14px; line-height:22px;}
 .section-block-medium a.title {color:#fff !important; font-size:18px; line-height:24px; font-weight:700;}
 .section-block-medium a.title:hover {text-decoration:none;}
 .section-block-medium .post {overflow:hidden; }
-.section-block-medium h2 {line-height:20px; margin:0;}
+.section-block-medium h2 {line-height:20px; margin:100;}
 .section-block-medium .post {overflow:hidden;}
 .section-block-double {}
 .section-banner {min-height: 1px; padding-right: 15px; padding-left: 15px; padding-top: 20px; padding-bottom: 20px;}
