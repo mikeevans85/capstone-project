@@ -5,7 +5,7 @@
         <template id="SourceCard">
           <div v-for="source in sources" class="col">
             <div class="card-body" style="width: 18rem;">
-              <img class="card-img" v-bind:src="source.image_url" alt="Source logo" />
+              <img class="card-img" v-bind:src="source.image_url" height="200" width="200" alt="Source logo" />
               <h2 class="card-name">{{ source.name }}</h2>
               <p class="card-publishedAt">{{ source.place_of_pub }}</p>
               <div class="card-body">

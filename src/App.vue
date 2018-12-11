@@ -2,17 +2,23 @@
 	<div id="app">
 		<div id="nav" class="container-fluid headerbar">
 			<div class="container clearfix">
+				<!--Header-->
 				<header>
-					<nav class="navbar navbar-default">
+					<nav class="navbar navbar-fixed-top">
 						<div class="row">
 							<div class="navbar-header">
 								<a class="navbar-brand" href="#">
-									<img alt="Newsy Logo" src="https://www.freeiconspng.com/uploads/news-icon-13.png" />
+									<img
+										alt="Newsy Logo"
+										src="https://www.freeiconspng.com/uploads/news-icon-13.png"
+										width="70"
+										height="70"
+									/>
 								</a>
 							</div>
 							<div id="navbar" class="navbar-collapse collapse">
 								<ul class="nav navbar-nav">
-									<li><a href="#">Home</a></li>
+									<li><a href="#/">Home</a></li>
 									<li><a href="#/usersources">Feed</a></li>
 									<li><a href="#/sources">Sources</a></li>
 									<li><a href="#/login">Login</a></li>
@@ -27,19 +33,18 @@
 				</header>
 			</div>
 		</div>
-
-		<!--
-			<div id="nav">
-			<!-- --- links to current pages ---
-		-->
-		<!--
-			<router-link to="/">Home</router-link>
-				<router-link to="/logout">Logout</router-link>
-				<router-link to="/usersources">Feed</router-link>
-				<router-link to="/sources">News Sources</router-link>
+		<router-view />
+		<!--Footer-->
+		<div class="container-fluid section-footer-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xs-6">© OrcasThemes 2016, All rights reserved</div>
+				<div class="col-md-6 col-xs-6"><span class="pull-right">Fonts by Google Fonts. Icons by Fontello</span></div>
 			</div>
-			<router-view />
-		-->
+		</div>
+	</div>
+	</footer>
+
 	</div>
 </template>
 

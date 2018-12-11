@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  
+<!-- Mirrored from themes.orcaslabs.com/posted/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Dec 2018 20:24:25 GMT -->
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://www.freeiconspng.com/uploads/news-icon-13.png">
-    <link href="posted/css/bootstrap.css" rel="stylesheet">
-    <link href="posted/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="posted/css/animation.css">
-    <link rel="stylesheet" href="posted/css/fontello.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="themes.orcaslabs.com/posted/js/bootstrap.min.js"></script>
+	  <link rel="icon" type="image/png" href="https://www.freeiconspng.com/uploads/news-icon-13.png" />
+    <title>Newsy - The Choosy News App</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+	  <link rel="stylesheet" href="css/animation.css">
+	  <link rel="stylesheet" href="css/fontello.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script type="text/javascript">
+		$(document).ready(function(){
+			 $("#mycarousel").carousel();
+		});
+		( function() {
+		$('#btn-search').on('click', function(e) {
+			e.preventDefault();
+			$('#search').animate({width: 'toggle'}).focus();
+		});
+		} () );
+	</script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
 
-    <title>Newsy</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but capstone-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<!-- Mirrored from themes.orcaslabs.com/posted/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Dec 2018 20:25:31 GMT -->
 </html>
