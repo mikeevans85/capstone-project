@@ -1,21 +1,33 @@
 <template>
   <div id="sources">
     <div class="container">
-      <div class="row">
-        <template id="SourceCard">
-          <div v-for="source in sources" class="col">
-            <div class="card-body" style="width: 18rem;">
-              <img class="card-img" v-bind:src="source.image_url" height="200" width="200" alt="Source logo" />
-              <h2 class="card-name">{{ source.name }}</h2>
-              <p class="card-publishedAt">{{ source.place_of_pub }}</p>
-              <div class="card-body">
-              <p class="card-description">{{ source.description }}</p>
-              <toggle-button @change="toggleSource(source)" id="button" v-model="source.subscribed" :sync="true" :labels="true"/>
-              </div>
+      <div v-for="source in sources" class="row">
+        <section class="col-md-12 section-block-v2">
+        <!-- HEADLINE -->
+          <div class="headline-row">
+            <h1 class="section-title caticon sbx"><i>T</i><span class="tech"></span>{{ source.name }}</h1>
+             <toggle-button @change="toggleSource(source)" id="button" v-model="source.subscribed" :sync="true" :labels="true"/>
+          </div>
+          <div class="row">
+          <!-- THUMB LARGE -->
+            <div class="col-lg-6 col-md-6 col-lg-6">
+              <article class="post post-spacer thumb-large">
+                <div class="entry-header">
+                  <img class="img-responsive" v-bind:src="source.image_url" alt="Post img">
+                  <!-- Post content -->
+                  <div class="post-content">
+                    <div class="entry-title">
+                      <p class="caticon"><i class="caticon date-icon icon-clock"></i><span class="tech"></span>{{ source.place_of_pub }}</p>
+                      <p class="visible-md visible-lg visible-sm hidden-xs">{{ source.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
-        </template>
+        </section>
       </div>
+    </div>
     </div>
   </div>
 </div>
