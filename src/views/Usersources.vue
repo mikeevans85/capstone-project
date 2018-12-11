@@ -6,9 +6,15 @@
           <div v-if="usersources.length === 0">{{ message }}</div>
           <div v-else v-for="usersource in usersources" class="col">
             <div class="card-body" style="width: 50rem;">
-              <img class="card-src-img" v-bind:src="source.image_url" height="250" width="250" alt="Source logo" />
+              <img
+                class="card-src-img"
+                v-bind:src="usersource.source.image_url"
+                height="250"
+                width="250"
+                alt="Source logo"
+              />
               <h2 class="card-title">{{ usersource.title }}</h2>
-              <p class="card-publishedAt">{{ usersource.publishedAt }}</p>
+              <p class="card-publishedAt">{{ dateTime(usersource.publishedAt) }}</p>
               <img
                 class="card-img-top"
                 v-bind:src="
@@ -35,6 +41,7 @@
 <style></style>
 
 <script>
+/* global moment */
 var axios = require("axios");
 export default {
   data: function() {
@@ -59,7 +66,12 @@ export default {
       }.bind(this)
     );
   },
-  methods: {},
+  methods: {
+    dateTime: function(input) {
+      var moment = require("moment");
+      return moment(input).format("MMMM Do YYYY, h:mm:ss a");
+    }
+  },
   computed: {}
 };
 </script>

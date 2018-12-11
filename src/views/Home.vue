@@ -1,14 +1,24 @@
 <template>
   <div class="home">
-    <h1>Welcome to your news app!</h1>
-    <h5>Sign Up!</h5>
-    <a href="/#/signup">Click here to sign up.</a>
-    <h5>Login!</h5>
-    <a href="/#/login">Click here to login.</a>
+    <div class="container">
+      <img src="https://www.freeiconspng.com/uploads/news-icon-13.png" height="350" width="350" alt="Image not found" />
+      <h1><strong>Welcome to Newsy!</strong></h1>
+      <h3><a id="link" href="/#/signup">Sign Up!</a></h3>
+      <h3><a id="link" href="/#/login">Login!</a></h3>
+    </div>
   </div>
 </template>
 
-<style></style>
+<style>
+.home {
+  background-color: #008f54;
+  text-align: center;
+}
+
+#link {
+  color: black;
+}
+</style>
 
 <script>
 export default {

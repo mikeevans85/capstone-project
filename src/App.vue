@@ -7,7 +7,7 @@
 					<nav class="navbar navbar-fixed-top">
 						<div class="row">
 							<div class="navbar-header">
-								<a class="navbar-brand" href="#">
+								<a class="navbar-brand" href="#/">
 									<img
 										alt="Newsy Logo"
 										src="https://www.freeiconspng.com/uploads/news-icon-13.png"
@@ -48,4 +48,8 @@
 	</div>
 </template>
 
-<style></style>
+<style>
+	.nav {
+		background-color: #008f54;
+	}
+</style>
