@@ -10,14 +10,9 @@
             v-bind:key="usersources.publishedAt"
             class="col"
           >
+            <img class="img-responsive" :src="usersource.source_logo" alt="" style="width: 50px" />
             <div class="card-body" style="width: 50rem;">
-              <img
-                class="card-src-img"
-                v-bind:src="logoFinder(usersource.source.name)"
-                height="500"
-                width="500"
-                alt="Source logo"
-              />
+              <!-- <img class="img-fluid" v-bind:data-src="logoFinder(usersource.source.name)" alt="Source logo" /> -->
               <h2 class="card-title">{{ usersource.title }}</h2>
               <p class="card-publishedAt">{{ dateTime(usersource.publishedAt) }}</p>
               <img
@@ -58,7 +53,8 @@ export default {
       usersources: [],
       inputTitle: "",
       inputDescription: "",
-      sortAttribute: "publishedAt"
+      sortAttribute: "publishedAt",
+      url: ""
     };
   },
   created: function() {
@@ -83,6 +79,7 @@ export default {
     logoFinder: function(input) {
       this.sources.forEach(function(source) {
         if (source.name === input) {
+          console.log(source.image_url);
           return source.image_url;
         }
       });
