@@ -4,7 +4,12 @@
       <div class="row">
         <template id="SourceCard">
           <div v-if="usersources.length === 0">{{ message }}</div>
-          <div v-else v-for="usersource in usersources" class="col">
+          <div
+            v-else
+            v-for="usersource in orderBy(usersources, sortAttribute, -1)"
+            v-bind:key="usersources.publishedAt"
+            class="col"
+          >
             <div class="card-body" style="width: 50rem;">
               <img
                 class="card-src-img"
@@ -43,13 +48,17 @@
 <script>
 /* global moment */
 var axios = require("axios");
+import Vue2Filters from "vue2-filters";
+
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       message: "You have not selected any sources. Click on the sidebar to add sources to your feed!",
       usersources: [],
       inputTitle: "",
-      inputDescription: ""
+      inputDescription: "",
+      sortAttribute: "publishedAt"
     };
   },
   created: function() {
