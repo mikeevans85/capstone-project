@@ -13,9 +13,9 @@
             <div class="card-body" style="width: 50rem;">
               <img
                 class="card-src-img"
-                v-bind:src="usersource.source.image_url"
-                height="250"
-                width="250"
+                v-bind:src="logoFinder(usersource.source.name)"
+                height="500"
+                width="500"
                 alt="Source logo"
               />
               <h2 class="card-title">{{ usersource.title }}</h2>
@@ -28,7 +28,7 @@
                     : 'http://i2.wp.com/www.4motiondarlington.org/wp-content/uploads/2013/06/No-image-found.jpg?zoom=2&fit=300%2C300'
                 "
                 height="500"
-                width="800"
+                width="700"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -79,6 +79,13 @@ export default {
     dateTime: function(input) {
       var moment = require("moment");
       return moment(input).format("MMMM Do YYYY, h:mm:ss a");
+    },
+    logoFinder: function(input) {
+      this.sources.forEach(function(source) {
+        if (source.name === input) {
+          return source.image_url;
+        }
+      });
     }
   },
   computed: {}
