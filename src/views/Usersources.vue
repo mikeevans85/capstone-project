@@ -16,7 +16,8 @@
               <h2 class="card-title">{{ usersource.title }}</h2>
               <p class="card-publishedAt">{{ dateTime(usersource.publishedAt) }}</p>
               <img
-                class="card-img-top"
+                class="img-responsive"
+                id="card-image"
                 v-bind:src="
                   usersource.urlToImage
                     ? usersource.urlToImage
@@ -38,7 +39,24 @@
   </div>
 </template>
 
-<style></style>
+<style>
+.card-body {
+  margin-bottom: 40px;
+}
+.container {
+  text-align: center;
+}
+
+.card-body:hover img {
+  opacity: 0.5;
+  background: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+</style>
 
 <script>
 /* global moment */

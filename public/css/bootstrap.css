@@ -1123,6 +1123,11 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
+  transition: all 0.3s ease-in-out;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
   height: auto;
 }
 .img-rounded {
