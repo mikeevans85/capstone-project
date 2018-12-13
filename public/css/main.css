@@ -19,7 +19,7 @@
   font-style: normal;
 }
 
-html, body { height: 100% !important; height:auto; margin: 0 auto; background-color: #ffffff;}
+html, body { height: 100% !important; height:auto; margin: 2; auto; background-color: #ffffff;}
 html { font-size:100%; }
 body {font-size:14px;color:#000;font-family: 'Raleway', sans-serif;background-color: #ffffff;text-decoration:none;margin:0;padding:0;}
 
@@ -502,7 +502,7 @@ aside a.caticon {padding:5px 0; display:block; color:#fff; font-size:14px;}
 .headline-row:after {background: #ddd;content: "";display: block;height: 1px;top: 55%;width: 100%;left: 0; position:absolute;}
 
 /* ----- SECTION FOOTER ----- */
-.section-footer {background: #444444; margin-top:30px; padding:50px 0; color:#fff;}
+.section-footer {background: #444444; margin-top:0px; padding:0px 0; color:#fff;}
 .section-footer h1 {font-size:25px; font-weight:600;}
 .section-footer p {color:#fff; float:left;}
 .section-footer .navbar-nav {margin:7.5px 0; width:100%; display:block;}

@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row">
         <template id="SourceCard">
-          <div v-if="usersources.length === 0">{{ message }}</div>
+          <div v-if="usersources.length === 0">
+            <h2>{{ message }}</h2>
+          </div>
           <div
             v-else
             v-for="usersource in orderBy(usersources, sortAttribute, -1)"
@@ -67,7 +69,7 @@ export default {
   mixins: [Vue2Filters.mixin],
   data: function() {
     return {
-      message: "You have not selected any sources. Click on the sidebar to add sources to your feed!",
+      message: "You have not selected any sources. Click on 'Sources' to add sources to your feed!",
       usersources: [],
       inputTitle: "",
       inputDescription: "",

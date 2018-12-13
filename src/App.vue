@@ -35,6 +35,29 @@
 		</div>
 		<router-view />
 		<!--Footer-->
+		<div class="container-fluid section-footer">
+		<div class="container">
+			<div class="row">
+				<!-- ABOUT AND SOCIAL -->
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<a class="navbar-brand" href="#">
+						<img alt="Newsy Logo" src="https://www.freeiconspng.com/uploads/news-icon-13.png" height="70" width="70">
+					</a>
+					<ul class="nav navbar-nav">
+					  <li><a href="#" class="demo-icon icon-gplus social-icons"></a></li>
+					  <li><a href="#" class="demo-icon icon-pinterest social-icons"></a></li>
+					  <li><a href="#" class="demo-icon icon-facebook social-icons"></a></li>
+					  <li><a href="#" class="demo-icon icon-twitter social-icons"></a></li>
+					  <li><a href="#" class="demo-icon icon-vimeo social-icons"></a></li>
+					  <li><a href="#" class="demo-icon icon-rss social-icons"></a></li>
+					</ul>
+					<p>Subscribe to Newsy!</p>
+				</div>
+				
+				<!-- END -->
+			</div>
+		</div>
+	</div>
 		<div class="container-fluid section-footer-bar">
 		<div class="container">
 			<div class="row">
@@ -51,5 +74,11 @@
 <style>
 	.nav {
 		background-color: #008f54;
+	}
+	.router-view {
+		margin-bottom: 50px;
+	}
+	.container-fluid section-footer-bar {
+		margin-top: -50px;
 	}
 </style>
