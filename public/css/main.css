@@ -19,7 +19,7 @@
   font-style: normal;
 }
 
-html, body { height: 100% !important; height:auto; margin: 2; auto; background-color: #ffffff;}
+html, body { height: 100% !important; height:auto; margin-left: 20px; auto; background-color: #ffffff;}
 html { font-size:100%; }
 body {font-size:14px;color:#000;font-family: 'Raleway', sans-serif;background-color: #ffffff;text-decoration:none;margin:0;padding:0;}
 
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {line-height:1;}
 .headerbar {background-color:#191b28; margin-bottom:100px; width:100%;}
 .navbar {margin-bottom:0;}
 .navbar-default {border:0; background:#191b28;}
-.navbar-brand {padding:5px 15px; height:auto; margin-right: 20px;}
+.navbar-brand {padding:5px 15px; height:auto; margin-right: 0px;}
 .navbar-nav > li > a {color:#008f54; background:#191b28; !important; font-size:16px; font-weight:600;}
 
 .navbar-nav {margin:7.5px -15px;}
@@ -125,8 +125,8 @@ ul.navbar-right {text-align:center;}
 .icon-search:before { content: '\e80d'; font-size:14px;} 
 
 /* ----- SOCIAL ICONS ----- */
-a.social-icons {font-size:16px !important; color:#9699a0; padding:15px 2px !important;}
-a.social-icons:hover {color:#fff; text-decoration:none !important;}
+a.social-icons {font-size:75px !important; color:#9699a0; padding:15px !important;}
+a.social-icons:hover {color:#008f54; text-decoration:none !important;}
 
 /* ----- MISC ----- */
 .gap {padding-top:30px;}
@@ -134,7 +134,7 @@ a.social-icons:hover {color:#fff; text-decoration:none !important;}
 .sbx i {padding-top:7px !important;}
 .7pad i {padding-top:7px !important;}
 .section-title i {font-size:16px !important; width:27px !important; height:27px !important; padding-top:8px !important;}
-.post-spacer {margin-bottom:30px;}
+.post-spacer {margin-bottom:30px; text-align: center;}
 .sidear-post-spacer {margin-bottom:15px;}
 section.section-main-content, section.section-sidebar {padding-top:0; padding-bottom:0;}
 .section-sidebar {}
@@ -159,16 +159,16 @@ input::-webkit-search-cancel-button {
 .post-txt h2 {margin-top:10px;}
 .post-txt p {color:#444444;}
 .post-txt a.more {color:#444444; font-weight:600; margin-top:15px;}
-.post-content {position:absolute;bottom:0;left:0;padding:25px 35px;z-index:1;color:#fff;width:100%;
+.post-content {position:absolute;bottom:0;left:0;padding:5px 5px;z-index:1;color:#fff;width:100%;
 	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.13) 18%, rgba(0,0,0,0.33) 36%, rgba(0,0,0,0.74) 70%, rgba(0,0,0,0.91) 87%, rgba(0,0,0,1) 100%);
 	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.13) 18%,rgba(0,0,0,0.33) 36%,rgba(0,0,0,0.74) 70%,rgba(0,0,0,0.91) 87%,rgba(0,0,0,1) 100%);
 	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.13) 18%,rgba(0,0,0,0.33) 36%,rgba(0,0,0,0.74) 70%,rgba(0,0,0,0.91) 87%,rgba(0,0,0,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
 }
 p {color:#444444; font-size:14px; line-height:22px;}
-.entry-header {background:#000;}
+.entry-header {background:#000; text-align: center;}
 .item {background:#000; padding-right:0; }
-.media-body { padding-left:10px;}
+/*.media-body { padding-left:10px;}*/
 
 /* ----- CAROUSEL ----- */
 .carousel-control {z-index:2;}
@@ -230,7 +230,7 @@ p {color:#444444; font-size:14px; line-height:22px;}
 .section-single a.caticon {color:#888; font-size:16px;}
 .section-carousel {display:block; float:left;}
 .section-block-v1 .post {}
-.section-block-v1 .post .entry-header {height:100%; }
+.section-block-v1 .post .entry-header {height:100%; text-align: center;}
 .section-block-v1 .post img {height:100%; }
 .section-block-v1 ul li {}
 .section-block-v1 ul li:last-child {margin-bottom:0;}
@@ -249,7 +249,7 @@ p {color:#444444; font-size:14px; line-height:22px;}
 .section-banner-right img {text-align:right !important; right:0 !important; float:right;}
 
 /* ----- POSTS ----- */
-.postlist .entry-header {float:left; width:50%;}
+.postlist .entry-header {text-align: center; width:50%;}
 .postlist a.caticon { color: #444444; margin: 10px 0; }
 .postlist .post-txt { padding-left:20px; float:left; width:50%;}
 .postlist .post {margin-bottom:30px; float:left;}
@@ -374,7 +374,7 @@ h1.caticon {text-decoration:none;}
 
 /* ----- HOME #2 STYLES ----- */
 .home2 .entry-header,
-.home2 .post-txt {width:100% !important;}
+.home2 .post-txt {width:100% !important; text-align: center;}
 .home2 .post-txt {padding-left:0 !important;}
 
 /* ----- MODIFIC ----- */
@@ -497,22 +497,22 @@ aside a.caticon {padding:5px 0; display:block; color:#fff; font-size:14px;}
 .sidebar-video span.icon-clock::before {padding-right: 20px;}
 
 /* ----- HEADLINE ROW ----- */
-.headline-row {position: relative;text-align: left;margin-bottom:30px;}
+.headline-row {position: relative;text-align: center;margin-bottom:30px;}
 .headline-row h1 {background: #fff;position: relative;z-index: 1;display: inline-block;padding-right:20px;padding-left:5px;}
-.headline-row:after {background: #ddd;content: "";display: block;height: 1px;top: 55%;width: 100%;left: 0; position:absolute;}
+/*.headline-row:after {background: #ddd;content: "";display: block;height: 1px;top: 55%;width: 100%;left: 0; position:absolute;}*/
 
 /* ----- SECTION FOOTER ----- */
-.section-footer {background: #444444; margin-top:0px; padding:0px 0; color:#fff;}
+.section-footer {background: #444444; margin-top:30px; padding:0px 0; color:#fff;}
 .section-footer h1 {font-size:25px; font-weight:600;}
 .section-footer p {color:#fff; float:left;}
-.section-footer .navbar-nav {margin:7.5px 0; width:100%; display:block;}
+.section-footer .navbar-nav {margin:75px 0; width:100%; display:block;}
 .section-footer .navbar-nav li {display:inline-block;}
 .section-footer .navbar-brand {padding-left:0; width:100%;}
 .section-footer-bar {background: #191b28; padding:15px 0; color:#fff;}
 
-ul.footer-menu-links {display:block; list-style:none; padding:0; margin: 25px 0;}
+ul.footer-menu-links {display:block; list-style:none; padding:0; margin: 25px 25px;}
 ul.footer-menu-links li {margin-bottom:20px;}
-ul.footer-menu-links li a {color:#fff; font-size:14px; line-height: 18px;}
+ul.footer-menu-links li a {color:#fff; font-size:140px; line-height: 18px;}
 ul.footer-menu-links li:before  {font-size:10px; padding-right:20px;}
 
 ul.footer-tags {display:block; list-style:none; padding:0; margin: 25px 0;}

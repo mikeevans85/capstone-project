@@ -10,15 +10,15 @@
           </div>
           <div class="row">
           <!-- THUMB LARGE -->
-            <div class="col-lg-6 col-md-6 col-lg-6">
+            <div class="col">
               <article class="post post-spacer thumb-large">
                 <div class="entry-header">
-                  <img class="img-responsive" v-bind:src="source.image_url" alt="Post img">
+                  <img class="img-responsive" v-bind:src="source.image_url" height="250" width="250" alt="Post img">
                   <!-- Post content -->
                   <div class="post-content">
                     <div class="entry-title">
                       <p class="caticon"><i class="caticon date-icon icon-clock"></i><span class="tech"></span>{{ source.place_of_pub }}</p>
-                      <p class="visible-md visible-lg visible-sm hidden-xs">{{ source.description }}</p>
+                      <p class="visible-md visible-lg visible-sm visible-xs">{{ source.description }}</p>
                     </div>
                   </div>
                 </div>

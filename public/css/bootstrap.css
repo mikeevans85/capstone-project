@@ -12,6 +12,7 @@ html {
 body {
   /*margin: 0;*/
   padding-bottom: 20px;
+  padding-left: 200px;
 }
 footer {
   margin-top: -20px;
@@ -4010,7 +4011,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #777;
   text-decoration: none;
   cursor: not-allowed;
-  background-color: green;
+  background-color: #008f54;
 }
 .nav .open > a,
 .nav .open > a:hover,
@@ -4048,9 +4049,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: green;
+  background-color: #008f54;
   border: 1px solid #ddd;
-  border-bottom-color: green;
+  border-bottom-color: #008f54;
 }
 .nav-tabs.nav-justified {
   width: 100%;
@@ -4196,7 +4197,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-left: 15px;
   overflow-x: visible;
   -webkit-overflow-scrolling: touch;
-  border-top: 1px solid green;
+  border-top: 1px solid #008f54;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
 }
@@ -4310,7 +4311,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 8px;
   margin-right: 15px;
   margin-bottom: 8px;
-  background-color: green;
+  background-color: #008f54;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
