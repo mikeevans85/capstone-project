@@ -354,7 +354,7 @@ ul.footermedialist li:hover img,
 .caticon span.sidebar-popular  {background-color:#fa5b0d;}
 .caticon span.shop-widget  {background-color:#8ed32c;}
 .caticon span.weather {background-color: #4e5ebd;}
-.caticon span.tech {background-color: #27ceec;}
+.caticon span.tech, {background-color: #27ceec;}
 .caticon span.dontmiss {background-color: #ecd727;}
 .caticon span.urbanism {background-color: #7686c0;}
 .caticon span.video {background-color: #cc3b3b;}
@@ -502,13 +502,13 @@ aside a.caticon {padding:5px 0; display:block; color:#fff; font-size:14px;}
 /*.headline-row:after {background: #ddd;content: "";display: block;height: 1px;top: 55%;width: 100%;left: 0; position:absolute;}*/
 
 /* ----- SECTION FOOTER ----- */
-.section-footer {background: #444444; margin-top:30px; padding:0px 0; color:#fff;}
+.section-footer {background: #444444;  padding:0px 0; color:#fff;}
 .section-footer h1 {font-size:25px; font-weight:600;}
 .section-footer p {color:#fff; float:left;}
-.section-footer .navbar-nav {margin:75px 0; width:100%; display:block;}
+.section-footer .navbar-nav {margin:5px 0; width:100%; display:block;}
 .section-footer .navbar-nav li {display:inline-block;}
 .section-footer .navbar-brand {padding-left:0; width:100%;}
-.section-footer-bar {background: #191b28; padding:15px 0; color:#fff;}
+.section-footer-bar {background: #191b28; padding:5px 0; color:#fff;}
 
 ul.footer-menu-links {display:block; list-style:none; padding:0; margin: 25px 25px;}
 ul.footer-menu-links li {margin-bottom:20px;}

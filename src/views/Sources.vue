@@ -17,7 +17,9 @@
                   <!-- Post content -->
                   <div class="post-content">
                     <div class="entry-title">
-                      <p class="caticon"><i class="caticon date-icon icon-clock"></i><span class="tech"></span>{{ source.place_of_pub }}</p>
+                      <div style="font-size: 500px">
+                        <p><flag :iso="source.source_language" />{{ source.place_of_pub }}</p>
+                      </div>
                       <p class="visible-md visible-lg visible-sm visible-xs">{{ source.description }}</p>
                     </div>
                   </div>
@@ -33,7 +35,8 @@
 </div>
 </template>
 
-<style></style>
+<style>
+</style>
 
 <script>
 var axios = require("axios");

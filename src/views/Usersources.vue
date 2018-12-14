@@ -95,14 +95,6 @@ export default {
     dateTime: function(input) {
       var moment = require("moment");
       return moment(input).format("MMMM Do YYYY, h:mm:ss a");
-    },
-    logoFinder: function(input) {
-      this.sources.forEach(function(source) {
-        if (source.name === input) {
-          console.log(source.image_url);
-          return source.image_url;
-        }
-      });
     }
   },
   computed: {}

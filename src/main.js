@@ -4,6 +4,8 @@ import router from "./router";
 import axios from "axios";
 import ToggleButton from "vue-js-toggle-button";
 import Vue2Filters from "vue2-filters";
+import FlagIcon from "vue-flag-icon";
+Vue.use(FlagIcon);
 
 Vue.use(Vue2Filters);
 
