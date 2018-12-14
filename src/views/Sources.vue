@@ -9,7 +9,7 @@
              <toggle-button @change="toggleSource(source)" id="button" v-model="source.subscribed" :sync="true" :labels="true"/>
           </div>
           <div class="row">
-          <!-- THUMB LARGE -->
+          <!-- SOURCE CARD -->
             <div class="col">
               <article class="post post-spacer thumb-large">
                 <div class="entry-header">
@@ -58,7 +58,6 @@ export default {
   },
   methods: {
     toggleSource: function(source) {
-      // var toggleButton = document.getElementById('button');
       var params = {
         source_id: source.id
       };
