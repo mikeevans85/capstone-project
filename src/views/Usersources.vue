@@ -84,17 +84,57 @@ export default {
         this.sources = response.data;
       }.bind(this)
     );
-    axios.get("http://localhost:3000/api/feed").then(
-      function(response) {
-        console.log(response.data);
-        this.usersources = response.data;
-      }.bind(this)
-    );
+
+    // axios.get("http://localhost:3000/api/feed").then(
+    //   function(response) {
+    //     console.log(response.data);
+    //     this.usersources = response.data;
+    //   }.bind(this)
+    // );
+    // this.usersources.forEach(usersource => {
+    //   var source = this.sources.filter(source => source.api_url === usersource.source.id)[0];
+    //   var sourceLanguage = source.source_language;
+    //   var params = {
+    //     title: usersource.title,
+    //     description: usersource.description
+    //   };
+    //   console.log(usersource.title, usersource.description, source.source_language);
+    //   axios.post("http://localhost:3000/api/translater", params).then(
+    //     function(response) {
+    //       console.log(response.data);
+    //       this.sources = response.data;
+    //     }.bind(this)
+    //   );
+    // });
   },
   methods: {
     dateTime: function(input) {
       var moment = require("moment");
       return moment(input).format("MMMM Do YYYY, h:mm:ss a");
+    },
+
+    translateSource: function() {
+      axios.get("http://localhost:3000/api/feed").then(
+        function(response) {
+          console.log(response.data);
+          this.usersources = response.data;
+        }.bind(this)
+      );
+      this.usersources.forEach(usersource => {
+        var source = this.sources.filter(source => source.api_url === usersource.source.id)[0];
+        var sourceLanguage = source.source_language;
+        var params = {
+          title: usersource.title,
+          description: usersource.description
+        };
+        console.log(usersource.title, usersource.description, source.source_language);
+        axios.post("http://localhost:3000/api/translater", params).then(
+          function(response) {
+            console.log(response.data);
+            this.sources = response.data;
+          }.bind(this)
+        );
+      });
     }
   },
   computed: {}

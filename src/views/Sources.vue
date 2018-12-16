@@ -21,7 +21,7 @@
                         <p><flag :iso="source.source_language" />{{ source.place_of_pub }}</p>
                       </div>
                       <p class="visible-md visible-lg visible-sm visible-xs">{{ source.description }}</p>
-                      <toggle-button @change="translateSource(source)" id="translateButton" width="130" :sync="true" :labels="{checked: 'Source Translated', unchecked: 'Translate!!'}" /> 
+                      <toggle-button @change="translateSource()" id="translateButton" width="130" :sync="true" :labels="{checked: 'Source Translated', unchecked: 'Translate!!'}" /> 
                     </div>
                   </div>
                 </div>
@@ -46,6 +46,7 @@ export default {
     return {
       message: "You have not selected any sources. Click on the sidebar to add sources to your feed!",
       sources: [],
+      usersources: [],
       inputTitle: "",
       inputDescription: "",
     };
@@ -77,20 +78,28 @@ export default {
           }.bind(this));
       }
     },
-    translateSource: function(source) {
+    translateSource: function() {
       axios.get("http://localhost:3000/api/feed").then(
         function(response) {
           console.log(response.data);
           this.usersources = response.data;
-          var filteredSources = this.usersources.filter(function(usersource) {
-            return this.usersource.source.name === this.source.name;
+
+          this.usersources.forEach(usersource => {
+            var source = this.sources.filter(source => source.api_url === usersource.source.id)[0];
+            var sourceLanguage = source.source_language;
+            var params = {
+              title: usersource.title,
+              description: usersource.description
+            };
+            axios.post("http://localhost:3000/api/translater", params).then(
+              function(response) {
+                console.log(response.data);
+                this.translatedArticles = response.data;
+              }.bind(this)
+            );
           });
-          var params = filteredSources;
-          axios.post("http://localhost:3000/api/translate" + params).then(
-            function(response) {
-              console.log(response.data);
-            }.bind(this));
-        });
+        }.bind(this)
+      );
     }
   }
 };
