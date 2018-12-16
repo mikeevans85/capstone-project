@@ -21,6 +21,7 @@
                         <p><flag :iso="source.source_language" />{{ source.place_of_pub }}</p>
                       </div>
                       <p class="visible-md visible-lg visible-sm visible-xs">{{ source.description }}</p>
+                      <toggle-button @change="translateSource(source)" id="translateButton" width="130" :sync="true" :labels="{checked: 'Source Translated', unchecked: 'Translate!!'}" /> 
                     </div>
                   </div>
                 </div>
@@ -75,6 +76,21 @@ export default {
             this.$router.push("/sources");
           }.bind(this));
       }
+    },
+    translateSource: function(source) {
+      axios.get("http://localhost:3000/api/feed").then(
+        function(response) {
+          console.log(response.data);
+          this.usersources = response.data;
+          var filteredSources = this.usersources.filter(function(usersource) {
+            return this.usersource.source.name === this.source.name;
+          });
+          var params = filteredSources;
+          axios.post("http://localhost:3000/api/translate" + params).then(
+            function(response) {
+              console.log(response.data);
+            }.bind(this));
+        });
     }
   }
 };

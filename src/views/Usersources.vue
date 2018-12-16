@@ -69,8 +69,8 @@ export default {
   mixins: [Vue2Filters.mixin],
   data: function() {
     return {
-      message: "You have not selected any sources. Click on 'Sources' to add sources to your feed!",
       usersources: [],
+      message: "You have not selected any sources. Click on 'Sources' to add sources to your feed!",
       inputTitle: "",
       inputDescription: "",
       sortAttribute: "publishedAt",
