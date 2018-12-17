@@ -2,7 +2,7 @@
   <div id="sources">
     <div class="container">
       <div v-for="source in sources" class="row">
-        <section class="col-md-12 section-block-v2">
+        <section class="col-md-4 section-block-v2">
         <!-- HEADLINE -->
           <div class="headline-row">
             <h1 class="section-title caticon sbx"><i>T</i><span class="tech"></span>{{ source.name }}</h1>
@@ -21,7 +21,7 @@
                         <p><flag :iso="source.source_language" />{{ source.place_of_pub }}</p>
                       </div>
                       <p class="visible-md visible-lg visible-sm visible-xs">{{ source.description }}</p>
-                      <toggle-button @change="translateSource()" id="translateButton" width="130" :sync="true" :labels="{checked: 'Source Translated', unchecked: 'Translate!!'}" /> 
+                      <toggle-button @change="translateSource()" id="translateButton" width="130" :sync="true" :labels="{checked: 'Source Translated!', unchecked: 'Translate!!'}" /> 
                     </div>
                   </div>
                 </div>

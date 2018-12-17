@@ -13,7 +13,7 @@
             class="col"
           >
             <img class="img-responsive" :src="usersource.source_logo" alt="" style="width: 50px" />
-            <div class="card-body" style="width: 50rem;">
+            <div class="card-body" style="width: auto;">
               <!-- <img class="img-fluid" v-bind:data-src="logoFinder(usersource.source.name)" alt="Source logo" /> -->
               <h2 class="card-title">{{ usersource.title }}</h2>
               <p class="card-publishedAt">{{ dateTime(usersource.publishedAt) }}</p>
@@ -85,12 +85,12 @@ export default {
       }.bind(this)
     );
 
-    // axios.get("http://localhost:3000/api/feed").then(
-    //   function(response) {
-    //     console.log(response.data);
-    //     this.usersources = response.data;
-    //   }.bind(this)
-    // );
+    axios.get("http://localhost:3000/api/feed").then(
+      function(response) {
+        console.log(response.data);
+        this.usersources = response.data;
+      }.bind(this)
+    );
     // this.usersources.forEach(usersource => {
     //   var source = this.sources.filter(source => source.api_url === usersource.source.id)[0];
     //   var sourceLanguage = source.source_language;

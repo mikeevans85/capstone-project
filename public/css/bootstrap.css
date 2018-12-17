@@ -1593,10 +1593,10 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: 1.5px;
+  padding-left: 1.5px;
+  margin-right: none;
+  margin-left: none;
 }
 @media (min-width: 768px) {
   .container {
