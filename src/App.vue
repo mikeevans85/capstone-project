@@ -46,10 +46,10 @@
 			<div class="row">
 				<!-- ABOUT AND SOCIAL -->
 				<div class="col">
-					<a class="navbar-brand" href="#/">
-						<img alt="Newsy Logo" src="https://www.freeiconspng.com/uploads/news-icon-13.png" height="150" width="150">
+					<!-- <a class="navbar-brand" href="#/">
+						<img alt="Newsy Logo" src="https://www.freeiconspng.com/uploads/news-icon-13.png" height="50" width="50">
 					</a>
-					<h1>Newsy!</h1>
+					<h1>Newsy!</h1> -->
 					<ul class="nav navbar-nav">
 					  <li><a href="#" class="demo-icon icon-gplus social-icons"></a></li>
 					  <li><a href="#" class="demo-icon icon-pinterest social-icons"></a></li>

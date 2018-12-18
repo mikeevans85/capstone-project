@@ -502,7 +502,7 @@ aside a.caticon {padding:5px 0; display:block; color:#fff; font-size:14px;}
 /*.headline-row:after {background: #ddd;content: "";display: block;height: 1px;top: 55%;width: 100%;left: 0; position:absolute;}*/
 
 /* ----- SECTION FOOTER ----- */
-.section-footer {background: #444444;  padding:0px 0; color:#fff;}
+.section-footer {background: #444444; color:#fff;}
 .section-footer h1 {font-size:25px; font-weight:600;}
 .section-footer p {color:#fff; float:left;}
 .section-footer .navbar-nav {margin:5px 0; width:100%; display:block;}
