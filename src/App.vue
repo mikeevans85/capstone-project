@@ -4,7 +4,7 @@
 			<div class="container clearfix">
 				<!--Header-->
 				<header>
-					<nav class="navbar navbar-fixed-top">
+					<nav class="navbar navbar-default">
 						<div class="row">
 							<div class="navbar-header">
 								<a class="navbar-brand" href="#/">
@@ -15,6 +15,12 @@
 										height="70"
 									/>
 								</a>
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					              <span class="sr-only">Toggle navigation</span>
+					              <span class="icon-bar"></span>
+					              <span class="icon-bar"></span>
+					              <span class="icon-bar"></span>
+					            </button>
 							</div>
 							<div id="navbar" class="navbar-collapse collapse">
 								<ul class="nav navbar-nav">
@@ -73,9 +79,9 @@
 </template>
 
 <style>
-	.nav {
+	/*.nav {
 		background-color: #008f54;
-	}
+	}*/
 	.router-view {
 		margin-bottom: 50px;
 	}

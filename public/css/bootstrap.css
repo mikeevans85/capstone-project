@@ -244,7 +244,7 @@ th {
     page-break-after: avoid;
   }
   .navbar {
-    display: block;
+    display: absolute;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -1593,8 +1593,8 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 1.5px;
-  padding-left: 1.5px;
+  padding-right: -15px;
+  padding-left: -15px;
   margin-right: none;
   margin-left: none;
 }
@@ -3991,11 +3991,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav > li {
   position: relative;
-  display: block;
+  display: inline;
 }
 .nav > li > a {
   position: relative;
-  display: block;
+  display: inline;
   padding: 10px 15px;
 }
 .nav > li > a:hover,
@@ -4177,7 +4177,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar {
-  position: fixed;
+  position: relative;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
