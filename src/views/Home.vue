@@ -18,8 +18,9 @@
 
 <style>
 .home {
-  background-color: #008f54;
+  /*background-color: #008f54;*/
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #link {
@@ -67,6 +68,13 @@
   to {
     opacity: 1;
   }
+}
+span img {
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+span img :hover {
+  transform: scale(2);
 }
 </style>
 

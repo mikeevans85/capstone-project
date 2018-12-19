@@ -29,6 +29,16 @@
   </div>
 </template>
 
+<style>
+.signup {
+  margin-bottom: 15px;
+}
+
+.btn-btn-primary {
+  color: rgba(255, 255, 255, 0.5);
+}
+</style>
+
 <script>
 import axios from "axios";
 

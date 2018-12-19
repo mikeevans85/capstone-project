@@ -2,40 +2,44 @@
   <div class="usersources">
     <div class="container">
       <div class="row">
-        <template id="SourceCard">
-          <div v-if="usersources.length === 0">
-            <h2>{{ message }}</h2>
-          </div>
-          <div
-            v-else
-            v-for="usersource in orderBy(usersources, sortAttribute, -1)"
-            v-bind:key="usersources.publishedAt"
-            class="col"
-          >
-            <img class="img-responsive" :src="usersource.source_logo" alt="" style="width: 50px" />
-            <div class="card-body" style="width: auto;">
-              <!-- <img class="img-fluid" v-bind:data-src="logoFinder(usersource.source.name)" alt="Source logo" /> -->
-              <h2 class="card-title">{{ usersource.title }}</h2>
-              <p class="card-publishedAt">{{ dateTime(usersource.publishedAt) }}</p>
-              <img
-                class="img-responsive"
-                id="card-image"
-                v-bind:src="
-                  usersource.urlToImage
-                    ? usersource.urlToImage
-                    : 'http://i2.wp.com/www.4motiondarlington.org/wp-content/uploads/2013/06/No-image-found.jpg?zoom=2&fit=300%2C300'
-                "
-                height="500"
-                width="700"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-description">{{ usersource.description }}</h5>
-                <a v-bind:href="usersource.url"><strong>Click for full article</strong></a>
+        <div class="col-centered">
+          <template id="SourceCard">
+            <div v-if="usersources.length === 0">
+              <h2>{{ message }}</h2>
+            </div>
+            <div
+              v-else
+              v-for="usersource in orderBy(usersources, sortAttribute, -1)"
+              v-bind:key="usersources.publishedAt"
+              class="col"
+            >
+              <img class="img-responsive" :src="usersource.source_logo" alt="" style="width: 50px" />
+              <div class="card-body" style="width: auto;">
+                <!--
+                  <img class="img-fluid" v-bind:data-src="logoFinder(usersource.source.name)" alt="Source logo" />
+                -->
+                <h2 class="card-title">{{ usersource.title }}</h2>
+                <p class="card-publishedAt">{{ dateTime(usersource.publishedAt) }}</p>
+                <img
+                  class="img-responsive"
+                  id="card-image"
+                  v-bind:src="
+                    usersource.urlToImage
+                      ? usersource.urlToImage
+                      : 'http://i2.wp.com/www.4motiondarlington.org/wp-content/uploads/2013/06/No-image-found.jpg?zoom=2&fit=300%2C300'
+                  "
+                  height="500"
+                  width="700"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-description">{{ usersource.description }}</h5>
+                  <a v-bind:href="usersource.url"><strong>Click for full article</strong></a>
+                </div>
               </div>
             </div>
-          </div>
-        </template>
+          </template>
+        </div>
       </div>
     </div>
   </div>
@@ -57,6 +61,10 @@
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
 }
 </style>
 

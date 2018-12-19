@@ -19,7 +19,7 @@
   font-style: normal;
 }
 
-html, body { height: 100% !important; height:auto; margin-left: 20px; auto; background-color: #ffffff;}
+html, body { height: 100% !important; height:auto; margin-left: auto; background-color: #ffffff;}
 html { font-size:100%; }
 body {font-size:14px;color:#000;font-family: 'Raleway', sans-serif;background-color: #ffffff;text-decoration:none;margin:0;padding:0;}
 
@@ -125,7 +125,7 @@ ul.navbar-right {text-align:center;}
 .icon-search:before { content: '\e80d'; font-size:14px;} 
 
 /* ----- SOCIAL ICONS ----- */
-a.social-icons {font-size:75px !important; color:#9699a0; padding:15px !important;}
+a.social-icons {font-size:30px !important; color:#008F54; padding:25px !important;}
 a.social-icons:hover {color:#008f54; text-decoration:none !important;}
 
 /* ----- MISC ----- */
@@ -168,7 +168,7 @@ input::-webkit-search-cancel-button {
 p {color:#444444; font-size:14px; line-height:22px;}
 .entry-header {background:#000; text-align: center;}
 .item {background:#000; padding-right:0; }
-/*.media-body { padding-left:10px;}*/
+.media-body { padding-left:10px;}
 
 /* ----- CAROUSEL ----- */
 .carousel-control {z-index:2;}

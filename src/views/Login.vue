@@ -16,6 +16,12 @@
   </div>
 </template>
 
+<style>
+.login {
+  margin-bottom: 15px;
+}
+</style>
+
 <script>
 import axios from "axios";
 
