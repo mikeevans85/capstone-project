@@ -15,7 +15,7 @@
 										height="70"
 									/>
 								</a>
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
 					              <span class="sr-only">Toggle navigation</span>
 					              <span class="icon-bar"></span>
 					              <span class="icon-bar"></span>
@@ -50,7 +50,7 @@
 						<img alt="Newsy Logo" src="https://www.freeiconspng.com/uploads/news-icon-13.png" height="50" width="50">
 					</a>
 					<h1>Newsy!</h1> -->
-					<ul class="nav navbar-nav">
+					<ul class="nav">
 					  <li><a href="#" class="demo-icon icon-gplus social-icons"></a></li>
 					  <li><a href="#" class="demo-icon icon-pinterest social-icons"></a></li>
 					  <li><a href="#" class="demo-icon icon-facebook social-icons"></a></li>
