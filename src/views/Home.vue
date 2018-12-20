@@ -69,13 +69,6 @@
     opacity: 1;
   }
 }
-span img {
-  transform: scale(1);
-  transition: transform 0.5s;
-}
-span img :hover {
-  transform: scale(2);
-}
 </style>
 
 <script>

@@ -106,7 +106,7 @@
 	  font-size: 10px;
 	  opacity: 1;
 	  transform: scale(1);
-	  transition: all 0.3s ease-in-out 0.2s;
+	  transition: all 0.2s ease-in-out 0.1s;
 	}
 
 	#footer li:hover span {
