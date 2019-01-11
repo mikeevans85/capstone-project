@@ -84,39 +84,51 @@ export default {
       }
     },
     translateSource: function(source) {
+      var params = source.id;
+      axios.patch("http://localhost:3000/api/update" + params)
+        .then(
+          function(response) {
+            console.log(response.data);
+            this.posts.push(response.data);
+          }.bind(this)
+        )
+        .catch(
+          function(error) {
+            console.log(error.response.data);
+            this.Errors = error.response.data.errors;
+          }.bind(this)
+        );
+      // const foundSources = this.usersources.filter(s => s.source.id === source.api_url);
+      // console.log(foundSources);
+      // const filteredSources = foundSources.map(s => {
+      //   return {title: s.title, description: s.description};
+      // });
+      // filteredSources.forEach(s =>{
+      //   axios.get("http://localhost:3000/api/feed?api_url=" + apiUrl).then(
+      //     function(response) {
+      //       this.translatedArticles.push(response.data);
+      //     }.bind(this)
+      //   );
+      // });
 
-      const apiUrl = source.api_url;
+      // this.usersources.forEach(usersource => {
+      //   console.log(source);
+      //   var source = this.sources.filter(source => source.api_url === usersource.source.id)[0].api_url;
+      //   console.log("Hello", source);
+      //   var sourceLanguage = source.source_language;
+      //   var params = {
 
-          const foundSources = this.usersources.filter(s => s.source.id === source.api_url)
-          const filteredSources = foundSources.map(s => {
-            return {title: s.title, description: s.description}
-          })
-          filteredSources.forEach(s =>{
-           axios.get("http://localhost:3000/api/feed?api_url=" + apiUrl).then(
-            function(response) {
-                this.translatedArticles.push(response.data);
-              }.bind(this)
-            );
-          })
-
-          this.usersources.forEach(usersource => {
-            // console.log(source);
-            var source = this.sources.filter(source => source.api_url === usersource.source.id)[0].api_url;
-            console.log("Hello", source);
-            var sourceLanguage = source.source_language;
-            var params = {
-
-              title: usersource.title,
-              description: usersource.description
-            };
-            // axios.post("http://localhost:3000/api/translater", params).then(
-            //   function(response) {
-            //     // console.log(response.data);
-            //     this.translatedArticles = response.data;
-            //   }.bind(this)
-            // );
-          });
-        // }.bind(this)
+      //     title: usersource.title,
+      //     description: usersource.description
+      //   };
+      //   axios.post("http://localhost:3000/api/translater", params).then(
+      //     function(response) {
+      //       console.log(response.data);
+      //       this.translatedArticles = response.data;
+      //     }.bind(this)
+      //   );
+      // });
+      // }.bind(this)
       // );
     }
   }
