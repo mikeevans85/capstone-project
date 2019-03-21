@@ -46,11 +46,6 @@
 			<div class="row">
 				<!-- ABOUT AND SOCIAL -->
 				<div class="col">
-					<!-- <a class="navbar-brand" href="#/">
-						<img alt="Newsy Logo" src="https://www.freeiconspng.com/uploads/news-icon-13.png" height="50" width="50">
-					</a>
-					<h1>Newsy!</h1> -->
-					<!-- <div class="zoom"> -->
 					<ul id="footer" class="nav">
 						  <li><span><a href="#" class="demo-icon icon-gplus social-icons"></a></span></li>
 						  <li><span><a href="#" class="demo-icon icon-pinterest social-icons"></a></span></li>
@@ -81,9 +76,6 @@
 </template>
 
 <style>
-	/*.nav {
-		background-color: #008f54;
-	}*/
 	.router-view {
 		margin-bottom: 50px;
 	}
@@ -91,13 +83,6 @@
 		margin-top: -50px;
 	}
 	#footer li {
-/*	  padding: 25px;
-	  /*background-color: green;*/
-	  /*transition: transform .2s; /* Animation */
-	  /*width: 200px;*/
-	  /*height: 100px;*/
-	  /*margin: 0 auto;*/
-	   /*background: lightgrey;*/
   		list-style: none;
   		margin: 5px 0;
 	}

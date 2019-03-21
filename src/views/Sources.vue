@@ -51,6 +51,7 @@ export default {
       message: "You have not selected any sources. Click on the sidebar to add sources to your feed!",
       sources: [],
       usersources: [],
+      translation: [],
       inputTitle: "",
       inputDescription: "",
       translatedArticles: []
@@ -59,7 +60,6 @@ export default {
   created: function() {
     axios.get("http://localhost:3000/api/sources").then(
       function(response) {
-        // console.log(response.data);
         this.sources = response.data;
       }.bind(this));
   },
@@ -72,64 +72,37 @@ export default {
         console.log("Create new");
         axios.post("http://localhost:3000/api/sources", params).then(
           function(response) {
-            // console.log(response.data);
           }.bind(this));
       } else {
         console.log("Delete");
         axios.delete("http://localhost:3000/api/sources/" + source.id).then(
           function(response) {
-            // console.log(response.data);
             this.$router.push("/sources");
           }.bind(this));
       }
     },
-    translateSource: function(source) {
-      var params = source.id;
-      axios.patch("http://localhost:3000/api/update" + params)
-        .then(
+
+    translateSource: function() {
+      axios.get("http://localhost:3000/api/feed").then(
+        function(response) {
+          console.log(response.data);
+          this.usersources = response.data;
+        }.bind(this)
+      );
+      this.usersources.forEach(usersource => {
+        var source = this.sources.filter(source => source.api_url === usersource.source.id)[0];
+        var sourceLanguage = source.source_language;
+        var params = {
+          title: usersource.title,
+          description: usersource.description
+        };
+        axios.post("http://localhost:3000/api/translater", params).then(
           function(response) {
             console.log(response.data);
-            this.posts.push(response.data);
-          }.bind(this)
-        )
-        .catch(
-          function(error) {
-            console.log(error.response.data);
-            this.Errors = error.response.data.errors;
+            this.translation = response.data;
           }.bind(this)
         );
-      // const foundSources = this.usersources.filter(s => s.source.id === source.api_url);
-      // console.log(foundSources);
-      // const filteredSources = foundSources.map(s => {
-      //   return {title: s.title, description: s.description};
-      // });
-      // filteredSources.forEach(s =>{
-      //   axios.get("http://localhost:3000/api/feed?api_url=" + apiUrl).then(
-      //     function(response) {
-      //       this.translatedArticles.push(response.data);
-      //     }.bind(this)
-      //   );
-      // });
-
-      // this.usersources.forEach(usersource => {
-      //   console.log(source);
-      //   var source = this.sources.filter(source => source.api_url === usersource.source.id)[0].api_url;
-      //   console.log("Hello", source);
-      //   var sourceLanguage = source.source_language;
-      //   var params = {
-
-      //     title: usersource.title,
-      //     description: usersource.description
-      //   };
-      //   axios.post("http://localhost:3000/api/translater", params).then(
-      //     function(response) {
-      //       console.log(response.data);
-      //       this.translatedArticles = response.data;
-      //     }.bind(this)
-      //   );
-      // });
-      // }.bind(this)
-      // );
+      });
     }
   }
 };

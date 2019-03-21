@@ -1,6 +1,7 @@
 <template>
   <div class="usersources">
     <div class="container">
+      <h1>{{ this.translation }}</h1>
       <div class="row">
         <div class="col-centered">
           <template id="SourceCard">
@@ -15,10 +16,7 @@
             >
               <img class="img-responsive" :src="usersource.source_logo" alt="" style="width: 50px" />
               <div class="card-body" style="width: auto;">
-                <!--
-                  <img class="img-fluid" v-bind:data-src="logoFinder(usersource.source.name)" alt="Source logo" />
-                -->
-                <h2 class="card-title">{{ usersource.title }}</h2>
+                <h2 class="card-title">{{ translation.text }}</h2>
                 <p class="card-publishedAt">{{ dateTime(usersource.publishedAt) }}</p>
                 <img
                   class="img-responsive"
@@ -78,6 +76,7 @@ export default {
   data: function() {
     return {
       usersources: [],
+      translation: [],
       message: "You have not selected any sources. Click on 'Sources' to add sources to your feed!",
       inputTitle: "",
       inputDescription: "",
@@ -99,50 +98,11 @@ export default {
         this.usersources = response.data;
       }.bind(this)
     );
-    // this.usersources.forEach(usersource => {
-    //   var source = this.sources.filter(source => source.api_url === usersource.source.id)[0];
-    //   var sourceLanguage = source.source_language;
-    //   var params = {
-    //     title: usersource.title,
-    //     description: usersource.description
-    //   };
-    //   console.log(usersource.title, usersource.description, source.source_language);
-    //   axios.post("http://localhost:3000/api/translater", params).then(
-    //     function(response) {
-    //       console.log(response.data);
-    //       this.sources = response.data;
-    //     }.bind(this)
-    //   );
-    // });
   },
   methods: {
     dateTime: function(input) {
       var moment = require("moment");
       return moment(input).format("MMMM Do YYYY, h:mm:ss a");
-    },
-
-    translateSource: function() {
-      axios.get("http://localhost:3000/api/feed").then(
-        function(response) {
-          console.log(response.data);
-          this.usersources = response.data;
-        }.bind(this)
-      );
-      this.usersources.forEach(usersource => {
-        var source = this.sources.filter(source => source.api_url === usersource.source.id)[0];
-        var sourceLanguage = source.source_language;
-        var params = {
-          title: usersource.title,
-          description: usersource.description
-        };
-        console.log(usersource.title, usersource.description, source.source_language);
-        axios.post("http://localhost:3000/api/translater", params).then(
-          function(response) {
-            console.log(response.data);
-            this.sources = response.data;
-          }.bind(this)
-        );
-      });
     }
   },
   computed: {}
